@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Alexandre Augusto Novarino Britto, Eduardo Magaldi Magno",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": 110.44, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 13.6,
+      "left": -8.5,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 80.75,
+      "left": 38.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 99.95,
+      "left": 38.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 119.15,
+      "left": 38.4,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "rgb1:COM", "esp:GND.1", "black", [ "v0" ] ],
+    [ "r3:2", "esp:13", "red", [ "v0" ] ],
+    [ "r3:1", "rgb1:R", "red", [ "h-38.4" ] ],
+    [ "r2:1", "rgb1:G", "green", [ "h-19.2", "v-48" ] ],
+    [ "r2:2", "esp:12", "green", [ "v0" ] ],
+    [ "r1:2", "esp:14", "blue", [ "h8.4", "v9.6" ] ],
+    [ "r1:1", "rgb1:B", "blue", [ "v0", "h-9.6" ] ]
+  ],
+  "dependencies": {}
+}
