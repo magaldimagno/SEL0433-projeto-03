@@ -83,19 +83,19 @@ void loop() {
       atualizarInterface = true;
     } 
     else if (comando == '1') {
-      frequenciaPasso = 10;
+      frequenciaPasso = 500;
       mcpwm_set_frequency(MCPWM_UNIT_0, MCPWM_TIMER_0, frequenciaPasso);
       mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, 50.0);
       mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-      Serial.println("[Serial] Baixa (10 Hz)");
+      Serial.println("[Serial] Baixa (500 Hz)");
       atualizarInterface = true;
     } 
     else if (comando == '2') {
-      frequenciaPasso = 50;
+      frequenciaPasso = 1500;
       mcpwm_set_frequency(MCPWM_UNIT_0, MCPWM_TIMER_0, frequenciaPasso);
       mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, 50.0);
       mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-      Serial.println("[Serial] Alta (50 Hz)");
+      Serial.println("[Serial] Alta (1500 Hz)");
       atualizarInterface = true;
     }
   }
