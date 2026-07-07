@@ -1,3 +1,7 @@
+// Alexandre Augusto Novarino Britto - 14754672
+// Eduardo Magaldi Magno - 15448780
+// Raphael Parra - 15554782
+
 #include <ESP32Servo.h>
 
 // Pinos de sinal

@@ -1,3 +1,7 @@
+// Alexandre Augusto Novarino Britto - 14754672
+// Eduardo Magaldi Magno - 15448780
+// Raphael Parra - 15554782
+
 // Pinos do LED RGB
 #define REDpin 13
 #define GREENpin 12
