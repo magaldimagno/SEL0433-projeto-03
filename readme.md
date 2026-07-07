@@ -28,9 +28,14 @@ A exibição dos dados utiliza o barramento **I2C** nos pinos **SDA (GPIO 21)** 
 *   As bibliotecas `Adafruit_GFX` e `Adafruit_SSD1306` foram empregadas para o gerenciamento da matriz de pixels do display.
 
 ### 4. Comunicação Serial (UART)
-O sistema mantém comunicação ativa a **115200 baud** para depuração.
+O sistema mantém comunicação ativa a **115200 baud** para depuração e controle da velocidade.
 *   Logs de monitoramento são enviados ao computador a cada 3 segundos, informando o estado do motor.
 *   Mensagens instantâneas são disparadas via serial sempre que o sentido de rotação é alterado pelo usuário.
+*   O usuário controla a velocidade do motor via serial, enviando 0, 1 ou 2:
+    * 0: o motor para;
+    * 1: o motor gira na velocidade baixa;
+    * 2: o motor gira na velocidade alta.
+    * Caso a mensagem enviada pelo usuário seja diferente de 0, 1 ou 2, o sistema retorna com erro, pedindo que seja reenviada, adequando-se às exigências.
 
 
 
